@@ -17,17 +17,18 @@ class App extends Component {
         profession: 'Full-Stack JavaScript Developer',
       },
       show: true,
-      mountTime: new Date().toLocaleTimeString()
+      mountTime: new Date().toLocaleTimeString() // affiche l'heure locale 🤷‍♂️
     }
   }
   
   toggle = () => {
-    this.setState((currentState) => ({show: !currentState.show}))
+    this.setState((currentState) => ({show: !currentState.show})) // change l'etat du State  show si l'on clique sur le button
   }
-  
+
+  // 1er étape de cycle d'un composant , losrqie le composant est monté
   componentDidMount() {
-    this.interval = setInterval(() => {
-      this.setState({ mountTime: new Date().toLocaleTimeString() });
+    this.interval = setInterval(() => { // application du setInterval attribut d'une seconde chaque fois que le composant est monté 
+      this.setState({ mountTime: new Date().toLocaleTimeString() }); 
     }, 1000);
   }
 
@@ -36,8 +37,7 @@ class App extends Component {
   }
 
   render() { 
-
-    const { person, show, mountTime } = this.state;
+    const { person, show, mountTime } = this.state; // destructuration du state
     
     return ( 
       <>
@@ -50,9 +50,9 @@ class App extends Component {
             <li>{person.bio}</li>
             <li>{person.profession}</li>
           </ul>
-        </div>
-        }
-        <button className='btn' onClick={this.toggle}>{show ? 'Hide' : 'Show'}</button>
+        </div>// condition sur l'affiche et le masquage à chaque clique 
+        } 
+        <button className='btn' onClick={this.toggle}>{show ? 'Hide' : 'Show' /* chaque sur le btn, si la condition est verifier, S'affiche soit Hide, soit Show*/ }</button>
         <div className="timer">
           <h4>{mountTime}</h4>
         </div>
