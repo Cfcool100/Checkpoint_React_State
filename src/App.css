@@ -1,0 +1,68 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.card{ 
+  width: 310px;
+  height: 310px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  box-shadow: 0px 0px .2rem #808080;
+}
+h1{
+  text-align: center;
+}
+.profile{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(#e66465, #9198e5);
+  margin: 0 0 3rem 0;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+img{
+  width: 100px;
+  height: 100%;
+  border-radius: 50px;
+  margin-top: 2rem;
+}
+h3,h4{
+  text-align: center;
+}
+.list{
+  list-style: none;
+  line-height: 1.5rem;
+  margin: 1rem 1rem;
+}
+.btn{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 100px;
+  height: 2rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: #3986a5;
+}
+.btn:active{
+  box-shadow: #808080 0rem .1rem .2rem;
+}
+.timer{
+  margin-top: 1rem;
+}
+.timer h4{
+  background-color: #313451;
+  width: 100px;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  color: #fff;
+  font-size: 13px;
+}
